@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use std::io::Write;
 
 /// A link in the document. May link to external or internal resources
 pub enum LinkRef {
@@ -6,17 +6,6 @@ pub enum LinkRef {
     Url(String),
     /// A reference to a local document by title
     Local(String),
-}
-
-pub enum Prop<T> {
-    Value(T),
-    Inherit,
-}
-
-impl<T> Default for Prop<T> {
-    fn default() -> Self {
-        Prop::Inherit
-    }
 }
 
 pub enum Node {
@@ -38,14 +27,13 @@ pub enum Node {
     XmlTag(String),
 }
 
-pub trait Renderer {
-    type Output;
-    fn render(&self, node: Node) -> Self::Output;
-}
-
 pub struct Article {
     author: String,
     date: String,
     title: String,
-    content: Vec<Node>
+    content: Vec<Node>,
+}
+
+pub trait Renderer {
+    fn render(&self, article: Article, write: &mut Write);
 }
