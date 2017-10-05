@@ -1,0 +1,8 @@
+[package]
+name = "boggy"
+version = "0.1.0"
+authors = ["Robin Miller <grenewodemiller@gmail.com>"]
+
+[dependencies]
+handlebars = "0.29.1"
+nom = "^3.2"

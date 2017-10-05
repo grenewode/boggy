@@ -1,0 +1,43 @@
+title: Hello World
+author: Robin Miller
+date: ...
+---
+
+% TODO: integrate fiddles?
+```lang
+// Code
+```
+
+`code`
+
+TODO: embed git/gist?
+[url]>
+
+
+| Detail
+(why)| Detail
+(why)| Extra Detail
+
+> Quote
+> More Quote
+> -- source
+
+# subsection
+## sub subsection
+
+@tag @tag
+
+(Link Name)[http://...]
+(Filter Link)[author: Robin Miller]
+(Filter Link)[date: date]
+(Filter Link)[some_property: filter]
+(Tag Link)[@tag]
+(Title Link)[Title]
+(Multi)[date: 09/09/09, @tag]
+
+ref: abs_ref | local_ref
+abs_ref: https://...
+local_ref: tag | author_ref | title
+
+<html />
+<html></html>
