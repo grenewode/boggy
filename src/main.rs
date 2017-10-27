@@ -3,7 +3,6 @@
 extern crate nom;
 extern crate handlebars;
 
-mod article;
-mod author;
+mod dom;
 
 fn main() {}
