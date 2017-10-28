@@ -7,15 +7,20 @@ pub enum Ref {
     Local(LocalRef),
 }
 
-pub enum Citation {
-    Remote(RemoteRef),
-    Other(String),
+pub struct ListItem {
+    title: String,
+    content: Option<Node>,
 }
 
 pub enum Node {
-    Section { title: String, children: Vec<Node> },
     Code { lang: String, source: String },
-    Citation(Citation),
     Link(Ref),
-    Captioned{child: Node, caption:  }
+    Image {
+        local_path: String,
+        alt: Option<String>,
+    },
+    Items(Vec<ListItem>),
+    OrderedItems(Vec<ListItem>),
+    Definitions(Vec<ListItem>),
+    
 }
